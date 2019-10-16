@@ -1,5 +1,0 @@
-sceneSetups:
-- path: Assets/Room2/morgue scene/morgue.unity
-  isLoaded: 1
-  isActive: 1
-  isSubScene: 0
