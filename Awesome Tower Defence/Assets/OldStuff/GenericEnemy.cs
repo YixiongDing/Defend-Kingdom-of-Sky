@@ -9,7 +9,7 @@ public class GenericEnemy : MonoBehaviour
     public LevelManagerScript levelManager;
     public int scoreValue;
     public int moneyValue;
-    public int healthValue;
+    public int damageAmount;
     public int enemyType;
 
 
@@ -17,6 +17,17 @@ public class GenericEnemy : MonoBehaviour
     public void DestroyMe()
     {
         levelManager.enemyDestroyed(this);
+        // Create explosion effect
+        GameObject explosion = Instantiate(this.destroyExplosionPrefab);
+        explosion.transform.position = this.transform.position;
+        
+        // Destroy self
+        Destroy(this.gameObject);
+    }
+
+    public void DestroyMeAtGoal()
+    {
+        levelManager.enemyDestroyedAtGoal(this);
         // Create explosion effect
         GameObject explosion = Instantiate(this.destroyExplosionPrefab);
         explosion.transform.position = this.transform.position;

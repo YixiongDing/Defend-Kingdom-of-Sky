@@ -26,7 +26,7 @@ public class LevelManagerScript : MonoBehaviour
         uiManager.remainingEnemies = enemiesLeft;
         if (enemiesLeft == 0)
         {
-            this.waveCompleted();
+            waveCompleted();
         }
     }
 
@@ -58,5 +58,15 @@ public class LevelManagerScript : MonoBehaviour
         player.money += waves[currentWave].waveMoneyBonus;
         uiManager.waveComplete();
         currentWave++;
+    }
+
+    public void enemyDestroyedAtGoal(GenericEnemy genericEnemy)
+    {
+        enemiesLeft--;
+        uiManager.remainingEnemies = enemiesLeft;
+        if (enemiesLeft == 0)
+        {
+            waveCompleted();
+        }
     }
 }

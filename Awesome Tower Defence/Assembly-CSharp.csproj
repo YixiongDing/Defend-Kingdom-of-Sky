@@ -70,14 +70,21 @@
     <Compile Include="Assets\OldStuff\ParticleScript.cs" />
     <Compile Include="Assets\OldStuff\ProjectileController.cs" />
     <Compile Include="Assets\OldStuff\SurroundTower.cs" />
+    <Compile Include="Assets\Scripts\BaseScript.cs" />
+    <Compile Include="Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\EditableNode.cs" />
     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\LevelManagerScript.cs" />
     <Compile Include="Assets\Scripts\MenuScripts\InstructionsSceneScript.cs" />
     <Compile Include="Assets\Scripts\MenuScripts\MainMenuScript.cs" />
     <Compile Include="Assets\Scripts\MenuScripts\OptionsSceneScript.cs" />
+    <Compile Include="Assets\Scripts\Turret.cs" />
+    <Compile Include="Assets\Scripts\TurretManager.cs" />
     <Compile Include="Assets\Scripts\UIScripts\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\UIScripts\UIController.cs" />
     <Compile Include="Assets\Scripts\WaveManager.cs" />
+    <Compile Include="Assets\Scripts\WaveSpawner.cs" />
     <Compile Include="Assets\Scripts\Waypoints.cs" />
     <Compile Include="Assets\TD\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\TD\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
@@ -290,8 +297,14 @@
     <Compile Include="Assets\TD\Scripts\TowerDefense\UI\ScorePanel.cs" />
     <Compile Include="Assets\TD\Scripts\TowerDefense\UI\TowerDefenseInputSchemeSwitcher.cs" />
     <Compile Include="Assets\TD\Scripts\TowerDefense\UI\UrlOpen.cs" />
+    <Compile Include="Assets\Voxel Turrets\Demo\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Voxel Turrets\Demo\Scripts\LerpLight.cs" />
+    <Compile Include="Assets\Voxel Turrets\Demo\Scripts\PlayerTurret.cs" />
+    <Compile Include="Assets\Voxel Turrets\Demo\Scripts\Turret.cs" />
+    <Compile Include="Assets\Voxel Turrets\Demo\Scripts\Weapon.cs" />
     <None Include="Assets\TD\PostProcessing\Resources\Shaders\DepthOfField.shader" />
     <None Include="Assets\AurynSky\Forest Pack\READ ME.txt" />
+    <None Include="Assets\Voxel Turrets\ReadMe.txt" />
     <None Include="Assets\TD\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
     <None Include="Assets\TD\PostProcessing\Resources\Shaders\Fog.shader" />
     <None Include="Assets\TD\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />
@@ -313,13 +326,16 @@
     <None Include="Assets\TD\PostProcessing\Resources\Shaders\AmbientOcclusion.shader" />
     <None Include="Assets\TD\PostProcessing\Resources\Bluenoise64\LICENSE.txt" />
     <None Include="Assets\TD\PostProcessing\Resources\Shaders\BuiltinDebugViews.shader" />
+    <None Include="Assets\Shader\WaveShader.shader" />
     <None Include="Assets\TD\PostProcessing\Resources\Shaders\Common.cginc" />
     <None Include="Assets\TD\PostProcessing\Resources\Bluenoise64\COPYING.txt" />
+    <None Include="Assets\Voxel Turrets\Demo\BaseColor.shader" />
     <None Include="Assets\TD\PostProcessing\Editor Resources\UI\Trackball.shader" />
     <None Include="Assets\TD\PostProcessing\Resources\Shaders\Bloom.cginc" />
     <None Include="Assets\TD\PostProcessing\Resources\Shaders\TAA.shader" />
     <None Include="Assets\TD\PostProcessing\Resources\Shaders\EyeHistogram.compute" />
     <None Include="Assets\TD\PostProcessing\Resources\Shaders\TAA.cginc" />
+    <None Include="Assets\Voxel Turrets\Demo\BaseAdditive.shader" />
     <None Include="Assets\TD\PostProcessing\Resources\Shaders\EyeAdaptation.cginc" />
     <None Include="Assets\TD\PostProcessing\Resources\Shaders\GrainGen.shader" />
     <None Include="Assets\TD\PostProcessing\Resources\Shaders\FXAA.shader" />
@@ -334,25 +350,25 @@
     <None Include="Assets\TD\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
     <None Include="Assets\TD\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:/Unity/Projects/COMP30019-Project2-new/COMP30019-Project-2/Awesome Tower Defence/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>D:/Unity/Projects/COMP30019-Project2-new/Awesome Tower Defence/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/Unity/Projects/COMP30019-Project2-new/COMP30019-Project-2/Awesome Tower Defence/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/Unity/Projects/COMP30019-Project2-new/Awesome Tower Defence/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/Unity/Projects/COMP30019-Project2-new/COMP30019-Project-2/Awesome Tower Defence/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>D:/Unity/Projects/COMP30019-Project2-new/Awesome Tower Defence/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>D:/Unity/Projects/COMP30019-Project2-new/COMP30019-Project-2/Awesome Tower Defence/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>D:/Unity/Projects/COMP30019-Project2-new/Awesome Tower Defence/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/Unity/Projects/COMP30019-Project2-new/COMP30019-Project-2/Awesome Tower Defence/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/Unity/Projects/COMP30019-Project2-new/Awesome Tower Defence/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/Unity/Projects/COMP30019-Project2-new/COMP30019-Project-2/Awesome Tower Defence/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/Unity/Projects/COMP30019-Project2-new/Awesome Tower Defence/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>D:/Unity/Projects/COMP30019-Project2-new/COMP30019-Project-2/Awesome Tower Defence/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>D:/Unity/Projects/COMP30019-Project2-new/Awesome Tower Defence/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/Unity/2019.1.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -538,13 +554,13 @@
       <HintPath>D:/Unity/2019.1.8f1/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>D:/Unity/Projects/COMP30019-Project2-new/COMP30019-Project-2/Awesome Tower Defence/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>D:/Unity/Projects/COMP30019-Project2-new/Awesome Tower Defence/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>D:/Unity/Projects/COMP30019-Project2-new/COMP30019-Project-2/Awesome Tower Defence/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>D:/Unity/Projects/COMP30019-Project2-new/Awesome Tower Defence/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>D:/Unity/Projects/COMP30019-Project2-new/COMP30019-Project-2/Awesome Tower Defence/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>D:/Unity/Projects/COMP30019-Project2-new/Awesome Tower Defence/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>D:/Unity/2019.1.8f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

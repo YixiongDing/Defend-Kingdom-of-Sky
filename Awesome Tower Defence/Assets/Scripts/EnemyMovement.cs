@@ -14,6 +14,9 @@ public class EnemyMovement : MonoBehaviour
     {
         Vector3 dir = target.position - transform.position;
         transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+        Quaternion lookRotation = Quaternion.LookRotation(dir);
+        Vector3 Rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * speed).eulerAngles;
+        transform.rotation = Quaternion.Euler(0f, Rotation.y, 0f);
         if (Vector3.Distance(transform.position, target.position) <= 2.0f)
         {
             GetNextWaypoint();
@@ -25,7 +28,10 @@ public class EnemyMovement : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        wavepointIndex++;
-        target = Waypoints.points[wavepointIndex];
+        else
+        {
+            wavepointIndex++;
+            target = Waypoints.points[wavepointIndex];
+        }
     }
 }

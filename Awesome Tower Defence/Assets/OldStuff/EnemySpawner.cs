@@ -5,13 +5,13 @@ using UnityEngine.AI;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject EnemyPrefab;
+    public GameObject EnemyType1;
+    public GameObject EnemyType2;
 
     public LevelManagerScript levelManager;
     //public int spawnDelay;
     //public int enemyCount;
 
-    public GameObject Target;
 
    // private int enemiesSpawned = 0;
 
@@ -46,10 +46,10 @@ public class EnemySpawner : MonoBehaviour
     {
         if (enemyType == 1)
         {
-            GameObject enemy = GameObject.Instantiate<GameObject>(EnemyPrefab);
+            GameObject enemy = GameObject.Instantiate<GameObject>(EnemyType1);
             enemy.GetComponent<GenericEnemy>().levelManager = levelManager;
-            enemy.GetComponent<NavMeshAgent>().destination = Target.transform.position;
             enemy.transform.position = this.gameObject.transform.position;
+            
         }
     }
 }
