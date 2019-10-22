@@ -69,7 +69,7 @@ ModelImporter:
     400060: RigSpine1
     400062: RigSpine2
     400064: RigSpine3
-    7400000: Walk In Place
+    7400000: Walk Forward In Place
     9500000: //RootNode
     2186277476908879412: ImportLogs
   externalObjects: {}
@@ -93,7 +93,6 @@ ModelImporter:
       and has rotation animation that will be discarded.\n\t'RigSpine2' is inbetween
       humanoid transforms and has rotation animation that will be discarded.\n\t'RigSpine3'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'RigNeck1'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'RigNeck2'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
@@ -108,7 +107,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Walk In Place
+      name: Walk Forward In Place
       takeName: Take 001
       firstFrame: 0
       lastFrame: 35

@@ -73,7 +73,7 @@ ModelImporter:
     400066: RigSpine3
     2100000: 01 - Default
     4300000: Boximon Cyclopes
-    7400000: Walk W Root
+    7400000: Walk Forward W Root
     9500000: //RootNode
     13700000: Boximon Cyclopes
     2186277476908879412: ImportLogs
@@ -112,7 +112,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Walk W Root
+      name: Walk Forward W Root
       takeName: Take 001
       firstFrame: 0
       lastFrame: 35

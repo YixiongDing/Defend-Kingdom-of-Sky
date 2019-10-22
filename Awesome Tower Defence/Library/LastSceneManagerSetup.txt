@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/AurynSky/WinterArena/Scenes/DemoScene_Winter.unity
+- path: Assets/AurynSky/Forest Pack/Scenes/DemoScene_Forest.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
