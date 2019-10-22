@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class GenericEnemy : MonoBehaviour
 {
+    public Transform targetPosition;
     public GameObject destroyExplosionPrefab;
     public LevelManagerScript levelManager;
     public int scoreValue;

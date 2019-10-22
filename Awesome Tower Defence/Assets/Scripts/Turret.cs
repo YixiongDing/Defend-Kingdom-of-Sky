@@ -43,7 +43,8 @@ public class Turret : MonoBehaviour
         }
         if (targetEnemy != null && minDistance <= range)
         {
-            target = targetEnemy.transform;
+            //target = targetEnemy.transform;
+            target = targetEnemy.GetComponent<GenericEnemy>().targetPosition;
         }
         else
         {

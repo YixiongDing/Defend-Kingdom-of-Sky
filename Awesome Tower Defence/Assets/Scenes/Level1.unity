@@ -352,7 +352,10 @@ MonoBehaviour:
   scoreText: {fileID: 2012568471}
   healthText: {fileID: 1438521596}
   moneyText: {fileID: 1124354802}
+  startWaveButton: {fileID: 0}
+  enemiesLeft: {fileID: 0}
   playerManager: {fileID: 2118395257}
+  remainingEnemies: 0
 --- !u!1 &469180836
 GameObject:
   m_ObjectHideFlags: 0
