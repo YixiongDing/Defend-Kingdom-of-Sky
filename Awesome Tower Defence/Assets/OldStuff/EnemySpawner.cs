@@ -48,8 +48,14 @@ public class EnemySpawner : MonoBehaviour
         {
             GameObject enemy = GameObject.Instantiate<GameObject>(EnemyType1);
             enemy.GetComponent<GenericEnemy>().levelManager = levelManager;
+            enemy.transform.position = this.gameObject.transform.position; 
+        }
+
+        else if (enemyType == 2)
+        {
+            GameObject enemy = GameObject.Instantiate<GameObject>(EnemyType2);
+            enemy.GetComponent<GenericEnemy>().levelManager = levelManager;
             enemy.transform.position = this.gameObject.transform.position;
-            
         }
     }
 }

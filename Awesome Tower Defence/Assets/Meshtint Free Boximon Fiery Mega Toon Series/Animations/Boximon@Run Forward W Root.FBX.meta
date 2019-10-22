@@ -69,7 +69,7 @@ ModelImporter:
     400060: RigSpine1
     400062: RigSpine2
     400064: RigSpine3
-    7400000: Run Forward W Root
+    7400000: Run W Root
     9500000: //RootNode
     2186277476908879412: ImportLogs
   externalObjects: {}
@@ -108,7 +108,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Run Forward W Root
+      name: Run W Root
       takeName: Take 001
       firstFrame: 0
       lastFrame: 20

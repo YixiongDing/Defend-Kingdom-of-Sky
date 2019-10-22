@@ -164,6 +164,8 @@ GameObject:
   m_Component:
   - component: {fileID: 594491370929109536}
   - component: {fileID: 594491370938566056}
+  - component: {fileID: -6626124933166024968}
+  - component: {fileID: -8101699985045475057}
   m_Layer: 0
   m_Name: Tower Mage
   m_TagString: Untagged
@@ -210,6 +212,37 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-6626124933166024968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594491370929333162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3da6d5d84acc874ba82ec08c5ea5563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+--- !u!114 &-8101699985045475057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594491370929333162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b1955be90e0a14d9e8d8fbb88acb04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyExplosionPrefab: {fileID: 0}
+  levelManager: {fileID: 0}
+  scoreValue: 0
+  moneyValue: 0
+  damageAmount: 0
+  enemyType: 0
 --- !u!1 &594491370929334176
 GameObject:
   m_ObjectHideFlags: 0
