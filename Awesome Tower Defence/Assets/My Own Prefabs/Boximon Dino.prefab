@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: -8396475418414600409}
   m_Layer: 0
   m_Name: Boximon Dino
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56b1955be90e0a14d9e8d8fbb88acb04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyExplosionPrefab: {fileID: 7657169164591352636, guid: 1ae1752399abeb94b8831c663c066be2,
+  destroyExplosionPrefab: {fileID: 773954525551844186, guid: d3ff8ad7210b1cf48a2711e2fbadd1b0,
     type: 3}
   levelManager: {fileID: 0}
   scoreValue: 10
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee1a70fd2daa9394ca5d7d9dc0088b31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
+  startingHealth: 300
   zeroHealthEvent:
     m_PersistentCalls:
       m_Calls:

@@ -7,6 +7,9 @@ public class EnemySpawner : MonoBehaviour
 {
     public GameObject EnemyType1;
     public GameObject EnemyType2;
+    public GameObject EnemyType3;
+    public GameObject EnemyType4;
+    public GameObject EnemyType5;
 
     public LevelManagerScript levelManager;
     //public int spawnDelay;
@@ -54,6 +57,27 @@ public class EnemySpawner : MonoBehaviour
         else if (enemyType == 2)
         {
             GameObject enemy = GameObject.Instantiate<GameObject>(EnemyType2);
+            enemy.GetComponent<GenericEnemy>().levelManager = levelManager;
+            enemy.transform.position = this.gameObject.transform.position;
+        }
+
+        else if (enemyType == 3)
+        {
+            GameObject enemy = GameObject.Instantiate<GameObject>(EnemyType3);
+            enemy.GetComponent<GenericEnemy>().levelManager = levelManager;
+            enemy.transform.position = this.gameObject.transform.position;
+        }
+
+        else if (enemyType == 4)
+        {
+            GameObject enemy = GameObject.Instantiate<GameObject>(EnemyType4);
+            enemy.GetComponent<GenericEnemy>().levelManager = levelManager;
+            enemy.transform.position = this.gameObject.transform.position;
+        }
+
+        else if (enemyType == 5)
+        {
+            GameObject enemy = GameObject.Instantiate<GameObject>(EnemyType5);
             enemy.GetComponent<GenericEnemy>().levelManager = levelManager;
             enemy.transform.position = this.gameObject.transform.position;
         }
